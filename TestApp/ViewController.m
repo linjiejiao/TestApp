@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ServerSocketManager.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = UIColor.whiteColor;
+    [[ServerSocketManager sharedInstance] setupServer];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
